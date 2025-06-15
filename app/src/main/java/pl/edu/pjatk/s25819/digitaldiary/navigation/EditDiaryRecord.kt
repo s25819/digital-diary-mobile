@@ -14,4 +14,8 @@ class EditDiaryRecord(private val diaryRecord: DiaryRecord) : Destination() {
             )
         )
     }
+
+    override fun toString(): String {
+        return "Nawiguj do okna edycji istniejącego wpisu"
+    }
 }

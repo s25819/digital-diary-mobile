@@ -8,6 +8,6 @@ class PopBackStack : Destination() {
     }
 
     override fun toString(): String {
-        return "Nawigacja powrotna"
+        return "Nawiguj do poprzedniego ekranu"
     }
 }

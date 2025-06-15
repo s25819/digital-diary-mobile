@@ -3,5 +3,6 @@
 
     <string name="diary_record_location_label">Lokalizacja</string>
     <string name="diary_record_content_label">Notatka</string>
-    <string name="add_new_diary_record_button_label">Dodaj wpis</string>"
+    <string name="add_new_diary_record_button_label">Dodaj wpis</string>
+    <string name="add_new_entry">Dodaj</string>"
 </resources>

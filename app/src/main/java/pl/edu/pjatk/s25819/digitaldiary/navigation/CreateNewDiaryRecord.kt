@@ -17,6 +17,6 @@ class CreateNewDiaryRecord : Destination() {
     }
 
     override fun toString(): String {
-        return "Nawigacja do dodania nowego goods"
+        return "Nawiguj do okna tworzenia nowego wpisu"
     }
 }
