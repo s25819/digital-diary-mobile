@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/diaryListFragment">
+
+    <!-- Ekran listy -->
+    <fragment
+        android:id="@+id/diaryListFragment"
+        android:name="pl.edu.pjatk.s25819.digitaldiary.fragments.DiaryRecordsListFragment"
+        android:label="Lista wpisów">
+        <action
+            android:id="@+id/nav_to_create"
+            app:destination="@id/createRecordFragment" />
+    </fragment>
+
+    <!-- Ekran tworzenia wpisu -->
+    <fragment
+        android:id="@+id/createRecordFragment"
+        android:name="pl.edu.pjatk.s25819.digitaldiary.fragments.CreateDiaryRecordFragment"
+        android:label="Dodaj wpis" />
+</navigation>
