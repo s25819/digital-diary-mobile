@@ -1,16 +1,12 @@
 package pl.edu.pjatk.s25819.digitaldiary.model
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import java.time.LocalDateTime
+import kotlinx.serialization.Serializable
 
-@Entity
+@Serializable
 data class DiaryRecord(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
-    val memo: String,
-    val createdAt: LocalDateTime = LocalDateTime.now(),
-    val location: String,
-    val image: String
+    val id: Int,
+    val title: String,
+    val content: String,
+    val location: String
 ) {
 }

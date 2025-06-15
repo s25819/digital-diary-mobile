@@ -1,11 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
 }
 
 android {
     namespace = "pl.edu.pjatk.s25819.digitaldiary"
-    compileSdk = 35
+    compileSdkVersion(rootProject.extra["compileSdkVersion"] as Int)
 
     defaultConfig {
         applicationId = "pl.edu.pjatk.s25819.digitaldiary"
@@ -51,6 +52,8 @@ dependencies {
     // obsługa widoków viewmodel
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.fragment.ktx)
 
     // nawigacja
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -58,6 +61,20 @@ dependencies {
 
     // dane
     implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.legacy.support.v4)
+
+    // integracja http
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // serializacja
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit2.kotlinx.serialization.converter)
+    implementation(libs.okhttp)
+
+    // korutyny
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

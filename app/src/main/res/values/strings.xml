@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DigitalDiary</string>
+
+    <string name="diary_record_location_label">Lokalizacja</string>
+    <string name="diary_record_content_label">Notatka</string>
 </resources>
